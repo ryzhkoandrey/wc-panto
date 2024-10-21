@@ -1,0 +1,95 @@
+.card {
+    position: relative;
+    width: 268px;
+    font-family: var(--font-cards);
+
+    &__link {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    &__photo {
+        margin-top: 50px;
+        border-radius: 20px 20px 0 0;
+        height: 240px;
+        text-align: center;
+        background-color: #fafafa;
+    }
+
+    &__img {
+        margin-top: -50px;
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        height: 202px;
+        padding: 14px 22px 28px;
+        border-radius: 0 0 20px 20px;
+        background-color: #fff;
+    }
+
+    &__category {
+        position: relative;
+        z-index: 3;
+        font-size: 16px;
+        color: var(--text-muted);
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 21px;
+        text-transform: capitalize;
+        color: var(--text-card-dark-blue);
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+    }
+
+    &__price {
+        display: flex;
+        align-items: flex-start;
+        gap: 3px;
+
+        font-weight: 600;
+        font-size: 21px;
+        color: var(--text-card-dark-blue);
+
+        &::before {
+            content: attr(data-value);
+            font-size: 15px;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        width: 48px;
+        height: 48px;
+        font-size: 0;
+        background: var(--ui-dark-blue);
+        transition: opacity .2s ease-in;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

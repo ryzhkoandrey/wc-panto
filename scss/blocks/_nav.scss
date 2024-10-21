@@ -1,0 +1,16 @@
+.nav {
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    gap: 20px;
+    align-items: center;
+
+    &__logo {}
+
+    &__btn {
+        display: none;
+
+        @include tablet {
+            display: block;
+        }
+    }
+}

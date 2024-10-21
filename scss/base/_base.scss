@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html,
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: calc(1280px + 30px);
+    padding: 0 15px;
+    margin: 0 auto;
+
+    &--small {
+        max-width: calc(1064px + 30px);
+    }
+}
+
+.none {
+    display: none !important;
+}
+
+.title-2 {
+    font-weight: 700;
+    font-size: clamp(32px, 1.702rem + 1.49vw, 42px);
+}

@@ -1,0 +1,101 @@
+.footer {
+    padding: clamp(60px, 2.024rem + 8.63vw, 118px) 0 56px;
+    background-color: var(--footer-bg);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--footer-text-color);
+
+    a {
+        color: var(--footer-text-color);
+        transition: opacity .1s ease-in;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    &__grid {
+        margin-bottom: clamp(60px, 2.024rem + 8.63vw, 118px);
+        display: grid;
+        grid-template-columns: 3fr 1fr 2fr 2fr 2fr;
+        gap: 60px 20px;
+
+        @include tablet {
+            grid-template-columns: 4fr 1fr 3fr 3fr;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__desc {
+
+        p + p {
+            margin-top: 1em;
+        }
+
+        @include mobile {
+            grid-column: 1 / 3;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 29px;
+    }
+
+    &__nav {
+
+        &--services {
+            grid-column-start: 3;
+
+            @include mobile {
+                grid-column-start: auto;
+            }
+        }
+    }
+
+    &__nav-title {
+        margin-bottom: 20px;
+        font-family: var(--font-footer-accent);
+        font-size: 17px;
+        letter-spacing: -0.01em;
+        color: var(--footer-accent);
+    }
+
+    &__list {
+        display: grid;
+        gap: 16px;
+    }
+
+    &__list-item {}
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            gap: 20px;
+        }
+    }
+
+    &__copyright {
+        font-family: var(--font-footer-accent);
+        letter-spacing: -0.01em;
+        color: rgba(255, 255, 255, .5);
+    }
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        @include mobile {
+            gap: 20px;
+        }
+    }
+}
